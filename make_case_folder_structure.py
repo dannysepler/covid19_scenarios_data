@@ -37,9 +37,12 @@ def generate(root, continent, countries):
 # ------------------------------------------------------------------------
 # Main point of entry
 
-if __name__ == "__main__":
+def main():
     for continent, subregions in get_regions(FILE).items():
         root = f"{ROOT}/{continent}"
         mkdir(root)
         for subregion, countries in subregions.items():
             generate(root, subregion, countries)
+
+if __name__ == "__main__":
+    main()

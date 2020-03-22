@@ -6,6 +6,7 @@ Will need to be integrated with other parsers once they become available.
 '''
 import csv
 import json
+import os
 from urllib.request import urlopen
 
 from collections import defaultdict
@@ -92,11 +93,13 @@ def flatten(cases):
 
 def parse():
     cases = retrieve_case_data()
-    with open('case_counts.json', 'w') as fh:
+    tmp_file = 'case_counts.json'
+    with open(tmp_file, 'w') as fh:
         json.dump(cases, fh)    
     cases = flatten(cases)
 
     write_tsv(f"case-counts/cds.tsv", cols, cases, "cds")
+    os.remove(tmp_file)
 
 if __name__ == "__main__":
     # for debugging

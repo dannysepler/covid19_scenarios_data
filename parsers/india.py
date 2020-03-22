@@ -45,7 +45,7 @@ def parse():
             elt  = [ dates, confirmedCases, deaths, None, None, None ]
             states[locations].append(elt)
 
-      for cntry, data in states.items():
+    for cntry, data in states.items():
         states[cntry] = sorted_date(states[cntry])
         
     for state, data in states.items():
