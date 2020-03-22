@@ -7,12 +7,12 @@
   "spain": {
     "primarySource": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "dataProvenance": "http://www.datadista.com",
-    "license": "unclear"
+    "license": "GNU Affero General Public License v3.0"
   },
   "switzerland": {
     "primarySource": "https://raw.github.com/openZH/covid_19/master/COVID19_Cases_Cantons_CH_total.csv",
     "dataProvenance": "OpenZH",
-    "license": "none specified"
+    "license": "Creative Commons Attribution 4.0 International"
   },
   "unitedstates": {
     "primarySource": "https://covidtracking.com/api/states/daily",
